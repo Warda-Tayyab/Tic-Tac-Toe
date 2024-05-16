@@ -1,59 +1,117 @@
-#game{
-    height:200px;
-    width:400px;
-    display: flex;
-    flex-wrap:wrap;
-    
-}
-body{
-  
-    background-color:pink ;
-}
-  #container{
-    display: flex;
-    flex-wrap:wrap;
-       
-  }  
 
-.box{
-    height:120px;
-     width:120px;
-     border-radius: 10px;
-     font-size: 80px;
-     color: black;
-    background-color: blanchedalmond;
+body {
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 }
-#reset{
-    display: block;
-    font-size: 15px;
-    margin-top: 200px;
 
- background-color: black;
- color: azure;
+h1 {
+  text-align: center;
 }
-.win{
-  font-size: 50px;
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
-#new-btn{
+
+#game {
+  display: flex;
+  flex-wrap: wrap;
+  width: 360px;
+}
+
+.box {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  font-size: 80px;
+  color: black;
+  background-color: blanchedalmond;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  cursor: pointer;
+}
+
+#reset, #new-btn {
   display: block;
-    font-size: 15px;
-
- background-color: black;
- color: azure;
+  font-size: 15px;
+  margin-top: 20px;
+  background-color: black;
+  color: azure;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
-.msg-container{
-  height:600px;
+
+.msg-container {
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 2rem;
 }
-.hide{
+
+.hide {
   display: none;
 }
-#msg{
+
+#msg {
   font-weight: bold;
   font-size: 30px;
 }
 
+/* Responsive Styles */
+@media (max-width: 600px) {
+  #game {
+      width: 300px;
+  }
+
+  .box {
+      height: 80px;
+      width: 80px;
+      font-size: 60px;
+      margin: 4px;
+  }
+
+  #reset, #new-btn {
+      font-size: 12px;
+      padding: 8px 16px;
+  }
+
+  #msg {
+      font-size: 24px;
+  }
+}
+
+@media (max-width: 400px) {
+  #game {
+      width: 240px;
+  }
+
+  .box {
+      height: 60px;
+      width: 60px;
+      font-size: 40px;
+      margin: 3px;
+  }
+
+  #reset, #new-btn {
+      font-size: 10px;
+      padding: 6px 12px;
+  }
+
+  #msg {
+      font-size: 20px;
+  }
+}
