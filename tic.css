@@ -21,44 +21,42 @@ h1 {
 
 #game {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns of equal width */
-  grid-template-rows: repeat(3, 1fr);    /* 3 rows of equal height */
-  gap: 5px; /* Space between grid items */
-  width: 90vmin; /* Responsive width based on viewport's minimum dimension */
-  height: 90vmin; /* Responsive height based on viewport's minimum dimension */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  width: 100%;
+  max-width: 360px;
 }
 
 .box {
+  height: 100px;
+  width: 100px;
+  border-radius: 10px;
+  font-size: 80px;
+  color: black;
+  background-color: blanchedalmond;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blanchedalmond;
-  border-radius: 10px;
-  font-size: 10vw; /* Responsive font size based on viewport width */
-  color: black; /* Set text color to pure black */
   cursor: pointer;
 }
 
-/* Buttons */
 #reset, #new-btn {
   display: block;
-  font-size: 4vw; /* Responsive font size */
+  font-size: 15px;
   margin-top: 20px;
   background-color: black;
   color: azure;
-  padding: 2vw 4vw; /* Responsive padding */
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-/* Message container */
 .msg-container {
-  height: auto; /* Adjust height dynamically */
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   gap: 2rem;
 }
 
@@ -68,46 +66,49 @@ h1 {
 
 #msg {
   font-weight: bold;
-  font-size: 5vw; /* Responsive font size */
+  font-size: 30px;
 }
 
 /* Responsive Styles */
 @media (max-width: 600px) {
   #game {
-    width: 80vmin; /* Adjust width for smaller screens */
-    height: 80vmin; /* Adjust height for smaller screens */
+    width: 100%;
+    max-width: 300px;
   }
 
   .box {
-    font-size: 12vw; /* Adjust font size */
+    height: 80px;
+    width: 80px;
+    font-size: 60px;
   }
 
   #reset, #new-btn {
-    font-size: 5vw; /* Adjust font size */
-    padding: 3vw 6vw; /* Adjust padding */
+    font-size: 12px;
+    padding: 8px 16px;
   }
 
   #msg {
-    font-size: 6vw; /* Adjust font size */
+    font-size: 24px;
   }
 }
 
 @media (max-width: 400px) {
   #game {
-    width: 90vmin; /* Further adjust width for very small screens */
-    height: 90vmin; /* Further adjust height for very small screens */
+    max-width: 240px;
   }
 
   .box {
-    font-size: 15vw; /* Further adjust font size */
+    height: 60px;
+    width: 60px;
+    font-size: 40px;
   }
 
   #reset, #new-btn {
-    font-size: 6vw; /* Further adjust font size */
-    padding: 4vw 8vw; /* Further adjust padding */
+    font-size: 10px;
+    padding: 6px 12px;
   }
 
   #msg {
-    font-size: 8vw; /* Further adjust font size */
+    font-size: 20px;
   }
 }
